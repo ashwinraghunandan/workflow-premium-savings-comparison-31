@@ -1,0 +1,134 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. */
+
+@layer base {
+  :root {
+    /* Clean, professional color system */
+    --background: 0 0% 100%;
+    --foreground: 215 25% 10%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 215 25% 10%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 215 25% 10%;
+
+    --primary: 217 91% 60%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 215 17% 95%;
+    --secondary-foreground: 215 25% 27%;
+
+    --muted: 215 17% 95%;
+    --muted-foreground: 215 13% 34%;
+
+    --accent: 215 17% 95%;
+    --accent-foreground: 215 25% 10%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 215 17% 91%;
+    --input: 215 17% 91%;
+    --ring: 217 91% 60%;
+
+    /* Success/savings color */
+    --success: 142 71% 45%;
+    --success-foreground: 0 0% 100%;
+    
+    /* Warning/overage color */
+    --warning: 32 95% 35%;
+    --warning-foreground: 0 0% 100%;
+    
+    /* Competitor brand colors (muted for subtle accents) */
+    --zapier: 25 95% 53%;
+    --make: 258 90% 66%;
+    --n8n: 0 84% 60%;
+    
+    /* Competitor colors for chart lines (more muted) */
+    --competitor-zapier: 215 13% 42%;
+    --competitor-make: 215 10% 58%;
+    --competitor-n8n: 30 5% 62%;
+
+    /* HighLevel brand and UI tokens */
+    --hl-space-blue: 210 80% 13%;
+    --hl-deep-blue: 213 91% 40%;
+    --hl-sky-blue: 209 96% 57%;
+    --hl-teal: 181 88% 53%;
+    --hl-capture-yellow: 49 100% 50%;
+    --hl-capture-yellow-hover: 49 100% 45%;
+    --bg-blue-2: 209 92% 95%;
+    --neutral-gray: 220 9% 46%;
+    --bg-green-1: 136 94% 75%;
+    --type-green: 136 79% 13%;
+    --close-green: 136 81% 47%;
+    --bg-yellow-2: 50 93% 94%;
+
+    /* Gradients */
+    --hero-gradient: linear-gradient(to bottom, hsl(var(--hl-space-blue)) 0%, hsl(var(--hl-deep-blue)) 50%, hsl(var(--hl-sky-blue)) 100%);
+    --footer-cta-gradient: linear-gradient(to right, hsl(var(--hl-sky-blue)) 0%, hsl(var(--background)) 100%);
+
+    --radius: 0.75rem;
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 212.7 26.8% 83.9%;
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans;
+    font-family: Inter, system-ui, -apple-system, sans-serif;
+  }
+}
