@@ -271,6 +271,9 @@ const SavingsCalculator: React.FC = () => {
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <div className="text-center mb-12 rounded-2xl p-10 bg-slate-900">
+          <div className="flex justify-center mb-6">
+            <img src="/lovable-uploads/8bea8cef-56fd-47dc-bad4-a5780820e739.png" alt="Company logo" className="h-16 w-auto" />
+          </div>
           <h1 className="text-4xl font-bold text-white mb-4">
             Stop Overpaying for Automations — Instantly See How Much You Can <span className="text-hl-teal">Save</span> with <span className="text-hl-teal">HighLevel</span>
           </h1>
