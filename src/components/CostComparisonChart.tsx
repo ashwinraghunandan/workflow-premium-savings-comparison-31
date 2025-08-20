@@ -1,75 +1,12 @@
 
 import React from 'react';
 import { LineChart, Line, Area, AreaChart, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, Legend, ComposedChart } from 'recharts';
+import { newPlans, competitorPlans, type PlanTier, type CompetitorPlan } from '@/data/pricingData';
 
 interface CostComparisonChartProps {
   currentExecutions: number;
 }
 
-interface PlanTier {
-  name: string;
-  monthlyFee: number;
-  includedExecutions: number;
-  overageRate: number;
-}
-
-interface CompetitorPlan {
-  tool: string;
-  plan: string;
-  monthlyTasks: number;
-  monthlyPrice: number;
-  perExecutionCost: number;
-  overageMultiplier: number;
-}
-
-const newPlans: PlanTier[] = [
-  {
-    name: 'Free',
-    monthlyFee: 0,
-    includedExecutions: 100,
-    overageRate: 0.01,
-  },
-  {
-    name: 'Starter',
-    monthlyFee: 10,
-    includedExecutions: 10000,
-    overageRate: 0.008,
-  },
-  {
-    name: 'Growth',
-    monthlyFee: 25,
-    includedExecutions: 30000,
-    overageRate: 0.005,
-  },
-  {
-    name: 'Scale',
-    monthlyFee: 50,
-    includedExecutions: 65000,
-    overageRate: 0.004,
-  }
-];
-
-const competitorPlans: CompetitorPlan[] = [
-  // Zapier plans
-  { tool: 'Zapier', plan: 'Free', monthlyTasks: 100, monthlyPrice: 0, perExecutionCost: 0, overageMultiplier: 1.0 },
-  { tool: 'Zapier', plan: 'Professional', monthlyTasks: 750, monthlyPrice: 19.99, perExecutionCost: 0.0267, overageMultiplier: 1.0 },
-  { tool: 'Zapier', plan: 'Professional', monthlyTasks: 2000, monthlyPrice: 49, perExecutionCost: 0.0245, overageMultiplier: 1.0 },
-  { tool: 'Zapier', plan: 'Professional', monthlyTasks: 5000, monthlyPrice: 89, perExecutionCost: 0.0178, overageMultiplier: 1.0 },
-  { tool: 'Zapier', plan: 'Professional', monthlyTasks: 10000, monthlyPrice: 129, perExecutionCost: 0.0129, overageMultiplier: 1.0 },
-  { tool: 'Zapier', plan: 'Team', monthlyTasks: 2000, monthlyPrice: 69, perExecutionCost: 0.0345, overageMultiplier: 1.0 },
-  { tool: 'Zapier', plan: 'Team', monthlyTasks: 5000, monthlyPrice: 139, perExecutionCost: 0.0278, overageMultiplier: 1.0 },
-  { tool: 'Zapier', plan: 'Team', monthlyTasks: 10000, monthlyPrice: 209, perExecutionCost: 0.0209, overageMultiplier: 1.0 },
-  { tool: 'Zapier', plan: 'Team', monthlyTasks: 50000, monthlyPrice: 409, perExecutionCost: 0.0082, overageMultiplier: 1.0 },
-  
-  // Make plans
-  { tool: 'Make', plan: 'Pro', monthlyTasks: 10000, monthlyPrice: 18.82, perExecutionCost: 0.0019, overageMultiplier: 1.0 },
-  { tool: 'Make', plan: 'Pro', monthlyTasks: 40000, monthlyPrice: 62.35, perExecutionCost: 0.0016, overageMultiplier: 1.0 },
-  { tool: 'Make', plan: 'Pro', monthlyTasks: 80000, monthlyPrice: 107.06, perExecutionCost: 0.0013, overageMultiplier: 1.0 },
-  
-  // n8n plans
-  { tool: 'n8n', plan: 'Starter', monthlyTasks: 2500, monthlyPrice: 20, perExecutionCost: 0.008, overageMultiplier: 1.0 },
-  { tool: 'n8n', plan: 'Pro', monthlyTasks: 10000, monthlyPrice: 50, perExecutionCost: 0.005, overageMultiplier: 1.0 },
-];
 
 const CostComparisonChart: React.FC<CostComparisonChartProps> = ({ currentExecutions }) => {
   const calculateNewPlanCost = (plan: PlanTier, executions: number) => {
