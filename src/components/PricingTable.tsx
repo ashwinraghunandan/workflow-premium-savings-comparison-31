@@ -58,7 +58,7 @@ const pricingTiers: PricingTier[] = [
     name: 'Growth',
     price: 25,
     executions: 30000,
-    overageRate: 0.005,
+    overageRate: 0.006,
     features: [
       '30,000 executions/month',
       'All Premium Actions',

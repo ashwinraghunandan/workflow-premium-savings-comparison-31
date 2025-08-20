@@ -14,7 +14,7 @@ const FAQ = () => {
     },
     {
       question: "What happens when I exceed my execution limit?",
-      answer: "You'll be charged overage rates that decrease with higher tiers: Free tier ($0.01), Starter ($0.008), Growth ($0.005), and Scale ($0.004) per execution. Much better than the old flat $0.01 rate!"
+      answer: "You'll be charged overage rates that decrease with higher tiers: Free tier ($0.01), Starter ($0.008), Growth ($0.006), and Scale ($0.004) per execution. Much better than the old flat $0.01 rate!"
     },
     {
       question: "Can I start with the Free plan?",

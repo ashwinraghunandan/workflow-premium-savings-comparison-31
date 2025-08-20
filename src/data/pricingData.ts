@@ -33,7 +33,7 @@ export const newPlans: PlanTier[] = [{
   name: 'Growth',
   monthlyFee: 25,
   includedExecutions: 30000,
-  overageRate: 0.005,
+  overageRate: 0.006,
   features: ['30,000 executions/month', 'Priority support', 'Advanced analytics']
 }, {
   name: 'Scale',
