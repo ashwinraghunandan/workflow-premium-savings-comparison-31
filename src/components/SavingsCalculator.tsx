@@ -319,7 +319,7 @@ const SavingsCalculator: React.FC = () => {
         {/* Workflows Premium Disclaimer */}
         <div className="mb-8 text-center max-w-4xl mx-auto">
           <p className="text-sm text-muted-foreground">
-            <strong>Workflows Premium is an add-on that only bills for premium triggers & actions (e.g., Google Sheets, Slack, Custom/Webhooks, Array Functions, Workflow AI). Standard workflow steps are included with your base plan and don't count toward your monthly allowance.</strong>
+            Workflows Premium is an add-on that only bills for premium triggers & actions (e.g., Google Sheets, Slack, Custom/Webhooks, Array Functions, Workflow AI). Standard workflow steps are included with your base plan and don't count toward your monthly allowance.
           </p>
         </div>
 
