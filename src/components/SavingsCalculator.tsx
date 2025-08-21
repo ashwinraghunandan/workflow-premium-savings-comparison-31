@@ -293,6 +293,13 @@ const SavingsCalculator: React.FC = () => {
               </CardContent>
             </Card>
           </div>
+          
+          {/* Competitor Pricing Disclaimer */}
+          <div className="text-center mt-4">
+            <p className="text-xs text-muted-foreground max-w-3xl mx-auto">
+              Competitor pricing is shown for reference only. Please verify details with the respective providers, as pricing structures may vary and change over time.
+            </p>
+          </div>
         </div>
 
         {/* Free Steps Proof Block */}
