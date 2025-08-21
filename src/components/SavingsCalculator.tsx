@@ -220,9 +220,7 @@ const SavingsCalculator: React.FC = () => {
                 <div className="text-sm text-hl-neutral mb-2">
                   Includes {bestPlan?.includedExecutions.toLocaleString()} executions/month
                 </div>
-                <div className="text-xs text-hl-neutral">
-                  All standard actions are unlimited — and free!
-                </div>
+                
               </CardContent>
             </Card>
 
@@ -306,12 +304,10 @@ const SavingsCalculator: React.FC = () => {
             </CardHeader>
             <CardContent>
               <div className="grid grid-cols-2 gap-x-8 gap-y-2 max-w-2xl mx-auto">
-                {freeStepsData.map((item, index) => (
-                  <div key={index} className="flex justify-between items-center py-1">
+                {freeStepsData.map((item, index) => <div key={index} className="flex justify-between items-center py-1">
                     <span className="text-sm text-hl-space">{item.step}</span>
                     <span className="text-sm font-medium text-hl-neutral">{item.percentage}%</span>
-                  </div>
-                ))}
+                  </div>)}
               </div>
               <div className="text-xs text-muted-foreground text-center mt-4 pt-4 border-t">
                 Based on HighLevel internal usage data; "free" = standard actions.
