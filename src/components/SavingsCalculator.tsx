@@ -266,47 +266,13 @@ const SavingsCalculator: React.FC = () => {
 
         {/* Savings Summary */}
         <div className="mb-12">
-          <Card className="border border-hl-blue2 rounded-xl shadow-sm max-w-2xl mx-auto bg-white">
-            <CardHeader>
-              <CardTitle className="text-2xl font-semibold text-center text-hl-space">Your Monthly Savings</CardTitle>
-            </CardHeader>
-            <CardContent>
-              <div className="flex flex-col items-center gap-2 text-center mb-6">
-                <div className="text-4xl font-bold text-hl-space"><span className="text-sm font-normal text-hl-neutral mr-2">Upto</span>${totalMonthlySavings.toFixed(0)}</div>
-                <div className="text-sm text-hl-neutral">Based on {monthlyExecutions.toLocaleString()} executions/month</div>
-              </div>
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-                <div className="flex items-center justify-center gap-3 rounded-lg border border-border p-4">
-                  <span className="h-2.5 w-2.5 rounded-full bg-competitor-zapier" />
-                  <div className="text-sm text-hl-space">Zapier</div>
-                  <div className="ml-2 font-semibold text-hl-close-green">${zapierSavings.toFixed(0)}/mo</div>
-                </div>
-                <div className="flex items-center justify-center gap-3 rounded-lg border border-border p-4">
-                  <span className="h-2.5 w-2.5 rounded-full bg-competitor-make" />
-                  <div className="text-sm text-hl-space">Make</div>
-                  <div className="ml-2 font-semibold text-hl-close-green">${makeSavings.toFixed(0)}/mo</div>
-                </div>
-                <div className="flex items-center justify-center gap-3 rounded-lg border border-border p-4">
-                  <span className="h-2.5 w-2.5 rounded-full bg-competitor-n8n" />
-                  <div className="text-sm text-hl-space">n8n</div>
-                  <div className="ml-2 font-semibold text-hl-close-green">${n8nSavings.toFixed(0)}/mo</div>
-                </div>
-              </div>
-            </CardContent>
-          </Card>
+          
         </div>
 
         {/* HighLevel Banner */}
         <div className="mb-8">
           <Card className="bg-hl-blue2 border-0 rounded-xl shadow-sm">
-            <CardContent className="p-8 text-center">
-              <h2 className="text-2xl font-semibold text-hl-space mb-4">
-                There is more with HighLevel
-              </h2>
-              <p className="text-lg text-hl-space leading-relaxed">
-                Only Premium Executions count towards your monthly execution limits. All the normal actions and trigger are free to use for unlimited executions irrespective of your plan!
-              </p>
-            </CardContent>
+            
           </Card>
         </div>
 
