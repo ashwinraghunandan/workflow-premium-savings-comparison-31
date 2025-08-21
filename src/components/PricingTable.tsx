@@ -97,11 +97,10 @@ const PricingTable = () => {
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-hl-space mb-4">
-            Choose Your Workflow Pricing Plan
+            Workflows Premium add-on (automation power-ups)
           </h2>
           <p className="text-xl text-hl-neutral max-w-3xl mx-auto">
-            Scale your automation with our new freemium model. No more double charging, 
-            transparent pricing, and volume discounts that grow with your business.
+            Only premium actions consume executions. Standard steps are included with your base plan and don't count.
           </p>
         </div>
 
