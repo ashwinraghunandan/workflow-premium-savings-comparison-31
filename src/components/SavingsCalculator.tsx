@@ -88,6 +88,39 @@ const SavingsCalculator: React.FC = () => {
   // Slider marks helpers (aligned to 5k increments starting from 0)
   const markValues = [0, 5000, 10000, 25000, 50000, 100000];
   const formatMark = (v: number) => `${(v / 1000).toFixed(0)}k`;
+
+  // Free steps data for proof block
+  const freeStepsData = [{
+    step: 'If/Else',
+    percentage: 19.41
+  }, {
+    step: 'Wait',
+    percentage: 19.39
+  }, {
+    step: 'Go To',
+    percentage: 9.76
+  }, {
+    step: 'Email',
+    percentage: 9.71
+  }, {
+    step: 'Add Contact Tag',
+    percentage: 4.50
+  }, {
+    step: 'Update Contact Tag',
+    percentage: 4.03
+  }, {
+    step: 'SMS',
+    percentage: 3.09
+  }, {
+    step: 'Drip',
+    percentage: 2.70
+  }, {
+    step: 'Create Opportunity',
+    percentage: 2.59
+  }, {
+    step: 'Math Operation',
+    percentage: 2.55
+  }];
   return <section className="py-16 px-4 bg-background">
       <div className="max-w-7xl mx-auto">
         {/* Header */}
@@ -264,9 +297,27 @@ const SavingsCalculator: React.FC = () => {
           </div>
         </div>
 
-        {/* Savings Summary */}
-        <div className="mb-12">
-          
+        {/* Free Steps Proof Block */}
+        <div className="mb-8">
+          <Card className="border border-hl-blue2 rounded-xl shadow-sm max-w-4xl mx-auto bg-white">
+            <CardHeader className="pb-4">
+              <CardTitle className="text-xl font-semibold text-center text-hl-space">Standard actions shouldn't cost extra. With HighLevel, they don't.</CardTitle>
+              <p className="text-center text-hl-neutral mt-2">~98% of real-world workflow steps are free executions and always included at no extra cost.</p>
+            </CardHeader>
+            <CardContent>
+              <div className="grid grid-cols-2 gap-x-8 gap-y-2 max-w-2xl mx-auto">
+                {freeStepsData.map((item, index) => (
+                  <div key={index} className="flex justify-between items-center py-1">
+                    <span className="text-sm text-hl-space">{item.step}</span>
+                    <span className="text-sm font-medium text-hl-neutral">{item.percentage}%</span>
+                  </div>
+                ))}
+              </div>
+              <div className="text-xs text-muted-foreground text-center mt-4 pt-4 border-t">
+                Based on HighLevel internal usage data; "free" = standard actions.
+              </div>
+            </CardContent>
+          </Card>
         </div>
 
         {/* HighLevel Banner */}
