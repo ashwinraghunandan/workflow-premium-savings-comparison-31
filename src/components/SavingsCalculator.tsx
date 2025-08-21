@@ -300,7 +300,7 @@ const SavingsCalculator: React.FC = () => {
           <Card className="border border-hl-blue2 rounded-xl shadow-sm max-w-4xl mx-auto bg-white">
             <CardHeader className="pb-4">
               <CardTitle className="text-xl font-semibold text-center text-hl-space">Standard actions shouldn't cost extra. With HighLevel, they don't.</CardTitle>
-              <p className="text-center text-hl-neutral mt-2">~98% of real-world workflow steps are unlimited and always included at no extra cost.</p>
+              <p className="text-center text-hl-neutral mt-2">~98% of real-world workflow steps are unlimited and always included with your base plan at no extra cost.</p>
             </CardHeader>
             <CardContent>
               <div className="grid grid-cols-2 gap-x-8 gap-y-2 max-w-2xl mx-auto">
@@ -318,7 +318,7 @@ const SavingsCalculator: React.FC = () => {
 
         {/* Workflows Premium Disclaimer */}
         <div className="mb-8 text-center max-w-4xl mx-auto">
-          <p className="text-sm text-muted-foreground">
+          <p className="text-muted-foreground text-xs">
             Workflows Premium is an add-on that only bills for premium triggers & actions (e.g., Google Sheets, Slack, Custom/Webhooks, Array Functions, Workflow AI). Standard workflow steps are included with your base plan and don't count toward your monthly allowance.
           </p>
         </div>
