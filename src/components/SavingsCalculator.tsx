@@ -293,17 +293,10 @@ const SavingsCalculator: React.FC = () => {
               </CardContent>
             </Card>
           </div>
-          
-          {/* Competitor Pricing Disclaimer */}
-          <div className="text-center mt-4">
-            <p className="text-xs text-muted-foreground max-w-3xl mx-auto">
-              Competitor pricing is shown for reference only. Please verify details with the respective providers, as pricing structures may vary and change over time.
-            </p>
-          </div>
         </div>
 
         {/* Free Steps Proof Block */}
-        <div className="mb-8">
+        <div className="mb-8 text-slate-50">
           <Card className="border border-hl-blue2 rounded-xl shadow-sm max-w-4xl mx-auto bg-white">
             <CardHeader className="pb-4">
               <CardTitle className="text-xl font-semibold text-center text-hl-space">Standard actions shouldn't cost extra. With HighLevel, they don't.</CardTitle>
