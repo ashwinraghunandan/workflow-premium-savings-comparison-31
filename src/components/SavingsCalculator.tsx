@@ -220,9 +220,7 @@ const SavingsCalculator: React.FC = () => {
                 <div className="text-sm text-hl-neutral mb-2">
                   Includes {bestPlan?.includedExecutions.toLocaleString()} executions/month
                 </div>
-                <div className="text-xs text-hl-neutral">
-                  All standard actions are unlimited — and free!
-                </div>
+                
               </CardContent>
             </Card>
 
@@ -301,30 +299,23 @@ const SavingsCalculator: React.FC = () => {
         <div className="mb-8">
           <Card className="border border-hl-blue2 rounded-xl shadow-sm max-w-4xl mx-auto bg-white">
             <CardHeader className="pb-4">
-              <CardTitle className="text-xl font-semibold text-center text-hl-space">Standard actions shouldn't cost extra. With HighLevel, they don't.</CardTitle>
-              <p className="text-center text-hl-neutral mt-2">~98% of real-world workflow steps are unlimited and always included at no extra cost.</p>
+              <CardTitle className="text-xl font-semibold text-center text-hl-space">98% of workflow steps are unlimited and included</CardTitle>
+              <p className="text-center text-hl-neutral mt-2">Standard workflow steps are included with your base plan and don't count toward your monthly allowance.</p>
             </CardHeader>
             <CardContent>
               <div className="grid grid-cols-2 gap-x-8 gap-y-2 max-w-2xl mx-auto">
-                {freeStepsData.map((item, index) => (
-                  <div key={index} className="flex justify-between items-center py-1">
+                {freeStepsData.map((item, index) => <div key={index} className="flex justify-between items-center py-1">
                     <span className="text-sm text-hl-space">{item.step}</span>
                     <span className="text-sm font-medium text-hl-neutral">{item.percentage}%</span>
-                  </div>
-                ))}
+                  </div>)}
               </div>
               <div className="text-xs text-muted-foreground text-center mt-4 pt-4 border-t">
                 Based on HighLevel internal usage data; "free" = standard actions.
+                <br />
+                <strong>Workflows Premium is an add-on that only bills for premium triggers & actions (e.g., Google Sheets, Slack, Custom/Webhooks, Array Functions, Workflow AI). Standard workflow steps are included with your base plan and don't count toward your monthly allowance.</strong>
               </div>
             </CardContent>
           </Card>
-        </div>
-
-        {/* Workflows Premium Disclaimer */}
-        <div className="mb-8 text-center max-w-4xl mx-auto">
-          <p className="text-sm text-muted-foreground">
-            <strong>Workflows Premium is an add-on that only bills for premium triggers & actions (e.g., Google Sheets, Slack, Custom/Webhooks, Array Functions, Workflow AI). Standard workflow steps are included with your base plan and don't count toward your monthly allowance.</strong>
-          </p>
         </div>
 
         {/* HighLevel Banner */}
@@ -336,12 +327,9 @@ const SavingsCalculator: React.FC = () => {
 
         {/* Plan Details */}
         <div className="mt-8 rounded-2xl p-6 bg-hl-yellow2">
-          <h2 className="text-2xl font-medium text-hl-space mb-2 text-center">
-            Workflow Premium - Recommended Plans ({(monthlyExecutions / 1000).toFixed(0)}k executions)
+          <h2 className="text-2xl font-medium text-hl-space mb-6 text-center">
+            Our Plan Recommendation: {(monthlyExecutions / 1000).toFixed(0)}k Executions
           </h2>
-          <p className="text-center text-hl-neutral mb-6">
-            Only premium actions consume executions. Standard steps are included with your base plan and don't count.
-          </p>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {newPlans.map(plan => {
             const cost = calculateNewPlanCost(plan, monthlyExecutions);
